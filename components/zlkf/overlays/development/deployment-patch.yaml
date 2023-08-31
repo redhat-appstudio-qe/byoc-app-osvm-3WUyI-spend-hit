@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: zlkf
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: POC
+          value: POC
+        image: quay.io/redhat-appstudio-qe/byoc-xrdy-tenant/byoc-app-osvm/zlkf@sha256:18183c36372383ec4cbd2309f4e56d45d6b99a51e1d6311394d739f69381770b
+        name: my-java-quarkus
+        resources: {}
+status: {}
