@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: zlkf
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: zlkf
+    app.kubernetes.io/part-of: byoc-app-osvm
+  name: zlkf
+spec:
+  ports:
+  - name: "8081"
+    port: 8081
+    targetPort: 8081
+  selector:
+    app.kubernetes.io/instance: zlkf
+status:
+  loadBalancer: {}
